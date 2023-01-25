@@ -1,38 +1,42 @@
 .App {
+  margin: auto;
+  padding: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr;
+}
+
+#startEvo {
+  width: 200px;
   text-align: center;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+/* Genetics CSS */
+#grid {
+  border-style: solid;
+  border-color: rgba(255,255,255, 0.3);
+  display: grid;
+  grid-column-start: 1;
+  grid-row-start: 2;
   background-color: #282c34;
-  min-height: 100vh;
+  grid-template-columns: repeat(14, 14fr);
+  grid-template-rows: repeat(14, 14fr);
+  grid-auto-flow: column;
+  row-gap: 0px;
+  column-gap: 0px;
+  width: 85vw;
+  height: 85vh;
+  margin: auto;
+}
+
+.title-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  text-align: center;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.individual {
+  background-color: wheat;
 }
