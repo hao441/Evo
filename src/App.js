@@ -11,10 +11,6 @@ function App() {
   const [gen, setGen] = useState("");
   const [clicked, setClicked] = useState(null)
 
-  useEffect(() => {
-    console.log(colours.slice(1,))
-  }, [colours])
-
   let POPULATION_SIZE = 1000;
   let GENES = `0123456789abcdef`;
 
@@ -88,7 +84,6 @@ function App() {
 
   const startEvo = () => {
     setClicked(true);
-    console.log("Evo Started")
   }
   
   useEffect(() => {
@@ -130,7 +125,6 @@ function App() {
       }
       population = new_generation;
 
-      console.log(`Generation: ${generation} Fitness: ${population[0].fitness}.`)
       setPop(population[0].fitness)
       setGen(generation)
       
