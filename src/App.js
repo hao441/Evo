@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect, useRef, useState } from 'react';
-import { click } from '@testing-library/user-event/dist/click';
 import { useNavigate } from 'react-router';
 
 
@@ -100,7 +98,6 @@ function App() {
 
     let population = []
     let generation = 1;
-    let complete = false
 
     for (let x = 0; x < POPULATION_SIZE; x++) {
       const gnome = Individual.create_gnome();
@@ -139,7 +136,6 @@ function App() {
       console.log(`Generation: ${generation} Fitness: ${population[0].fitness}.`)
       setPop(population[0].fitness)
       setGen(generation)
-      var rotate = false;
       
       setColours("hello")
       
