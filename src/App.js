@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 
 
@@ -21,8 +21,6 @@ function App() {
   let cells = 196;
   let targetColour = colours.slice(1,)
   let TARGET = new Array(cells).fill(targetColour);
-
-  const popper = useRef(0);
 
   const createGrid = () => {
     let grid = []
@@ -130,21 +128,18 @@ function App() {
         new_generation[0].chromosome.map((x,i) => document.getElementById(i).style.backgroundColor = `#${x}`)
 
       }
-      popper.current = new_generation
       population = new_generation;
 
       console.log(`Generation: ${generation} Fitness: ${population[0].fitness}.`)
       setPop(population[0].fitness)
       setGen(generation)
       
-      setColours("hello")
-      
       generation++
       
     }, 10)
     
     
-  }, [clicked])
+  })
 
   return (
     <>
