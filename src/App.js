@@ -130,7 +130,7 @@ function App() {
       
       generation++
       
-    }, 10)
+    }, 100)
     
     
   })
