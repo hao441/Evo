@@ -50,6 +50,22 @@ h1 {
   color: lightgray
 }
 
+h2 {
+  color: rgba(255,255,255,0.3);
+}
+
+
+h3 {
+  color: rgba(255,255,255,0.3);
+}
+
+p {
+  color: rgba(255,255,255,0.3);
+  width: 50vw;
+  text-align: center;
+  margin: auto
+}
+
 
 .start-button {
   width: 250px;

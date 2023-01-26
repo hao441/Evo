@@ -1,7 +1,9 @@
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router';
 
+let POPULATION_SIZE = 1000;
+let cells = 196;
 
 function App() {
   const navigate = useNavigate();
@@ -11,12 +13,15 @@ function App() {
   const [gen, setGen] = useState("");
   const [clicked, setClicked] = useState(null)
 
-  let POPULATION_SIZE = 1000;
+
+
   let GENES = `0123456789abcdef`;
 
-  let cells = 196;
+  
   let targetColour = colours.slice(1,)
   let TARGET = new Array(cells).fill(targetColour);
+
+  const popper = useRef(0);
 
   const createGrid = () => {
     let grid = []
@@ -84,6 +89,7 @@ function App() {
 
   const startEvo = () => {
     setClicked(true);
+    console.log("Evo Started")
   }
   
   useEffect(() => {
@@ -123,17 +129,21 @@ function App() {
         new_generation[0].chromosome.map((x,i) => document.getElementById(i).style.backgroundColor = `#${x}`)
 
       }
+      popper.current = new_generation
       population = new_generation;
 
+      // console.log(`Generation: ${generation} Fitness: ${population[0].fitness}.`)
       setPop(population[0].fitness)
       setGen(generation)
+      
+      setColours("hello")
       
       generation++
       
     }, 10)
-    
-    
-  })
+
+   // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [clicked])
 
   return (
     <>
