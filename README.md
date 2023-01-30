@@ -7,6 +7,8 @@ Before the evolution starts the user will choose a colour which will become the 
 
 The genetic algorithm has a static population of 500 and each Individual has its own 'colour' chromosome. The fitness of the individual is scored by how close that chromosome is to the target colour.
 
+Demo: https://evo.harrisonoates.io
+
 ## Available Scripts
 
 In the project directory, you can run:
