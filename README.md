@@ -1,11 +1,11 @@
 
 # EVO #
 
-Evo partitions a large container into 300 cells each assigned to an 'Individual' object that controls the background colour of the cell.
+Evo is a genetic algorithm that operates almost as a rubix cube solver.
 
-Before the evolution starts the user will choose a colour which will become the colour of the whole box.
+It starts as a grid of 300 cells all with the target colour as their background. Though each cell's background colour is controlled by an 'Individual' object with its own colour chromosome.
 
-The genetic algorithm has a static population of 500 and each Individual has its own 'colour' chromosome. The fitness of the individual is scored by how close that chromosome is to the target colour.
+When Evo begins, Individuals are ranked based on how close their chromosome colour is to the target colour then the top ten percent go through to the next generation. Generations continue till all cells are the target colour again.
 
 Demo: https://evo.harrisonoates.io
 
