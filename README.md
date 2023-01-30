@@ -1,9 +1,11 @@
-<<<<<<< HEAD
-# EVO #
-=======
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# EVO #
+
+Evo partitions a large container into 300 cells each assigned to an 'Individual' object that controls the background colour of the cell.
+
+Before the evolution starts the user will choose a colour which will become the colour of the whole box.
+
+The genetic algorithm has a static population of 500 and each Individual has its own 'colour' chromosome. The fitness of the individual is scored by how close that chromosome is to the target colour.
 
 ## Available Scripts
 
